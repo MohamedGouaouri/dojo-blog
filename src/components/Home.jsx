@@ -1,20 +1,18 @@
 import Blog from "./Blog";
 
-function Home(){
+function Home(props){
+
     return (
         <div>
-            <Blog 
-                title="Fortigate configuration"
-                desc="Introduction to firewalls"
-            />
-            <Blog 
-                title="Flutter mobile clean arch"
-                desc="The best way to organize your code"
-            />
-            <Blog 
-                title="Introduction to cryptography"
-                desc="A brief discussion about modern crypto"
-            />
+            {props.blogs.map((blog) => (
+                <Blog 
+                    key={blog.id} 
+                    id={blog.id}
+                    title={blog.title}
+                    desc={blog.desc}
+                    deleteBlog={props.deleteBlog} 
+                />
+            ))}
         </div>
     );
 }
