@@ -9,7 +9,7 @@ function Home(props){
                     key={blog.id} 
                     id={blog.id}
                     title={blog.title}
-                    desc={blog.desc}
+                    author={blog.author}
                     deleteBlog={props.deleteBlog} 
                 />
             ))}

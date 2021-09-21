@@ -1,0 +1,34 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Introduction to React",
+      "author": "Dina taklit",
+      "content": "React is"
+    },
+    {
+      "id": 2,
+      "title": "Introduction to Django",
+      "author": "Mohamed Gouaouri",
+      "content": "Django is"
+    },
+    {
+      "id": 3,
+      "title": "Introduction to Flutter",
+      "author": "Djamel sebagh",
+      "content": "Flutter is"
+    },
+    {
+      "id": 4,
+      "title": "Introduction to Docker",
+      "author": "Mohamed Gouaouri",
+      "content": "Docker is"
+    },
+    {
+      "id": 5,
+      "title": "Introduction to K8s",
+      "author": "Mohamed Gouaouri",
+      "content": "kubernetes is"
+    }
+  ]
+}

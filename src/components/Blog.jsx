@@ -13,7 +13,7 @@ function Blog(props){
                 </button>
             <div>
                 <h3>{props.title}</h3>
-                <p>{props.desc}</p>
+                <p>By {props.author}</p>
             </div>
             <a href="/post/id">Read more</a>
             
