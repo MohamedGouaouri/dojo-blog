@@ -1,3 +1,5 @@
 {
-  "blogs": []
+  "blogs": [
+    {"id": 1, "title": "Introduction to Docker", "author": "mohamed", "content": "Docker is"}
+  ]
 }

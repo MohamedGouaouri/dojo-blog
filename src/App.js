@@ -2,6 +2,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import useFetch from './hooks/useFetch';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import BlogForm from './components/BlogForm';
 
 function App() {
   var [blogs, setBlogs] = useFetch("http://localhost:8000/blogs");
@@ -20,16 +21,21 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Navbar/>
-      <div className="content">
-        <Switch >
-          <Route path="/">
-          {blogs !== null ? <Home blogs={blogs} deleteBlog={deleteBlog}/> : <div></div>}
-          </Route>
-        </Switch>
+    <Router>
+      <div className="App">
+        <Navbar/>
+        <div className="content">
+            <Switch >
+              <Route exact path="/">
+              {blogs !== null ? <Home blogs={blogs} deleteBlog={deleteBlog}/> : <div></div>}
+              </Route>
+              <Route path="/create">
+                <BlogForm />
+              </Route>
+            </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
