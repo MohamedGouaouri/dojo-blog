@@ -1,11 +1,12 @@
 import Home from './components/Home';
 import Navbar from './components/Navbar';
-import { useState, useEffect } from 'react';
+import useFetch from './hooks/useFetch';
 
 function App() {
-  var [blogs, setBlogs] = useState(null);
-  function deleteBlog(id){
-    // API call to delete
+  var [blogs, setBlogs] = useFetch("http://localhost:8000/blogs");
+
+
+  function deleteBlog(id){  
     fetch("http://localhost:8000/blogs/"+id, {
       method: "DELETE",
       headers: {
@@ -16,20 +17,7 @@ function App() {
     }).catch((err) => {
       console.log(err);
     })
-    
   }
-
-  useEffect(() => {
-    fetch("http://localhost:8000/blogs")
-    .then((resp) => {
-      return resp.json();
-    })
-    .then((data) => {
-      console.log(data);
-      // setBlogs(data);
-      setBlogs(data);
-    });
-  }, [])
 
   return (
     <div className="App">
