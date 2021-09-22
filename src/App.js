@@ -1,10 +1,10 @@
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import useFetch from './hooks/useFetch';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   var [blogs, setBlogs] = useFetch("http://localhost:8000/blogs");
-
 
   function deleteBlog(id){  
     fetch("http://localhost:8000/blogs/"+id, {
@@ -23,7 +23,11 @@ function App() {
     <div className="App">
       <Navbar/>
       <div className="content">
-        {blogs !== null ? <Home blogs={blogs} deleteBlog={deleteBlog}/> : <div></div>}
+        <Switch >
+          <Route path="/">
+          {blogs !== null ? <Home blogs={blogs} deleteBlog={deleteBlog}/> : <div></div>}
+          </Route>
+        </Switch>
       </div>
     </div>
   );

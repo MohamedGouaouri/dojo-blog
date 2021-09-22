@@ -13,6 +13,7 @@ function Home(props){
                     deleteBlog={props.deleteBlog} 
                 />
             ))}
+            
         </div>
     );
 }
