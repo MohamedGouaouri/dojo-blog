@@ -15,7 +15,7 @@ const useFetch = (url) => {
         return () => {
           abortController.abort();
         }
-      }, []);
+      }, [url]);
     return [data, setData];
 }
 

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import useFetch from './hooks/useFetch';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import BlogForm from './components/BlogForm';
+import BlogDetails from './components/BlogDetails';
 
 function App() {
   var [blogs, setBlogs] = useFetch("http://localhost:8000/blogs");
@@ -31,6 +32,9 @@ function App() {
               </Route>
               <Route path="/create">
                 <BlogForm />
+              </Route>
+              <Route path="/blog/:id"> 
+                <BlogDetails />
               </Route>
             </Switch>
         </div>

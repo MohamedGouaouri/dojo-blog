@@ -15,7 +15,7 @@ function Blog(props){
                 <h3>{props.title}</h3>
                 <p>By {props.author}</p>
             </div>
-            <a href="/post/id">Read more</a>
+            <a href={"/blog/"+props.id}>Read more</a>
             
         </div>
     );
