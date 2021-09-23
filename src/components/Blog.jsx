@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 function Blog(props){
@@ -15,8 +16,7 @@ function Blog(props){
                 <h3>{props.title}</h3>
                 <p>By {props.author}</p>
             </div>
-            <a href={"/blog/"+props.id}>Read more</a>
-            
+            <Link to={"/blog/"+props.id}>Read more</Link>
         </div>
     );
 }
