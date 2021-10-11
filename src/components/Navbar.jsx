@@ -6,10 +6,11 @@ function Navbar(props){
 
     return (
         <nav className="navbar">
-            <h3 >The dojo blog</h3>
+            <h3 >The db dojo blog</h3>
             <div className="links">
                 <Link to="/">Home</Link>
-                <Link to="/create" class="create-new">New Blog</Link>
+                <Link to="/">About</Link>
+                <Link to="/">Contact</Link>
             </div>
         </nav>
     );

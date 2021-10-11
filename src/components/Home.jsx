@@ -10,6 +10,7 @@ function Home(props){
                     id={blog.id}
                     title={blog.title}
                     author={blog.author}
+                    conntent={blog.content}
                     deleteBlog={props.deleteBlog} 
                 />
             ))}

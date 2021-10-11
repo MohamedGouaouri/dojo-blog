@@ -6,7 +6,7 @@ function Blog(props){
         props.deleteBlog(id)
     }
     return (
-        <div className="blog-review">
+        <div className="blog-preview">
                 <button 
                     className="delete-btn" 
                     onClick={() => handleDelete(props.id)}>
