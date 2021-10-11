@@ -15,7 +15,7 @@ const useFetch = (url) => {
         return () => {
           abortController.abort();
         }
-      }, [url]);
+      }, [url]); // eslint-disable-line
     return [data, setData];
 }
 
